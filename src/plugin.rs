@@ -33,7 +33,7 @@ impl SimplePluginCommand for FromDhall {
         "do the things with .dhall files"
     }
 
-    fn examples(&self) -> Vec<Example> {
+    fn examples(&self) -> Vec<Example<'_>> {
         vec![
             Example {
                 description: "Convert from a .dhall file into table",

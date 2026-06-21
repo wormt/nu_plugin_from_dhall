@@ -1,6 +1,6 @@
 [package]
 name = "nu_plugin_from_dhall"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Mika Naylor <mail@autophagy.io>"]
 repository = "https://github.com/autophagy/nu_plugin_from_dhall"
@@ -8,6 +8,11 @@ description = "Nushell plugin to add Dhall support"
 license = "MIT"
 
 [dependencies]
-nu-plugin = "0.100.0"
-nu-protocol = "0.100.0"
-serde_dhall = "0.12.1"
+nu-plugin = "0.113.1"
+nu-protocol = "0.113.1"
+serde_dhall = "0.13.0"
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+strip = true
