@@ -19,6 +19,7 @@
 
         language.c = {
           libraries = lib.optional pkgs.stdenv.isDarwin pkgs.libiconv;
+          includes = [ pkgs.openssl ];
         };
       };
     };
